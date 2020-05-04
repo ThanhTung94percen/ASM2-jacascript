@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Coffee House</title>
+    <link rel="shortcut icon" type="" href="img/favicon.png" />
+
+    <!-- Import Boostrap css, js, font awesome here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+    <!--Xem gio hang-->
+    <script>
+        $(document).ready(function() {
+            $("#save-list").click(function() {
+                $(".box-save").toggle(1000);
+
+            });
+
+        });
+
+        var ten = document.getElementsByClassName("card-title");
+        var gia = document.getElementsByClassName("card-text");
+        var sumprize = 0;
+
+        function clich(name, gold) {
+            var num = Number(gia[gold].innerHTML.substring(1, 3));
+            document.getElementById("sp").innerHTML +=
+                "<tr>" +
+
+                "<td><button>" + ten[name].innerHTML + "</button></td>" +
+                "<td><button>" + gia[gold].innerHTML + "</button></td>" +
+                "<td><button onClick='del(this," + num + ")'>Hủy</button></td>" +
+                "</tr>"
+
+            sumprize += num;
+            document.getElementById("sum").innerHTML = "<p>Total: " + sumprize + " $</p>";
+        }
+
+        function del(A, num) {
+            var del = A.parentElement.parentElement.remove();
+            sumprize -= num;
+            document.getElementById("sum").innerHTML = "<p>Total: " + sumprize + " $</p>";
+        };
+    </script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-branch" href="index.html">
+                <img src="./img/aaa.png" height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon" ></span>
+		</button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cauchuyenthuonghieu.html">CÂU CHUYỆN THƯƠNG HIỆU</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="hanhtrinh.html">CHUYỆN CÀ PHÊ</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="hanhtrinh.html">HÀNH TRÌNH TỪ NÔNG TRẠI ĐẾN LY CÀ PHÊ</a></li>
+                            <li><a class="dropdown-item" href="#">HẠT CÀ PHÊ THE COFFEE HOUSE</a></li>
+                            <li><a class="dropdown-item" href="#">NGHỆ THUẬT PHA CHẾ</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">PHIN VIỆT NAM</a></li>
+                                    <li><a href="">ESPRESSO</a></li>
+                                    <li><a href="">HAND BREW</a></li>
+                                    <li><a href="">COLD BREW</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">WORKSHOP CÀ PHÊ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="uudaithanhvien.html">ƯU ĐÃI THÀNH VIÊN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tuyendung.html">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tuyendung.html">TUYỂN DỤNG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">CỬA HÀNG</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Carousel -->
+
+    <article>
+        <div class="article-uudaithanhvien">
+            <div class="article-uudaithanhvien-banner">
+                <div class="article-uudaithanhvien-banner-text" style="margin-top: -50px">
+                    <h1><b>Chương trình thành viên</b></h1><br> Với mỗi phần bánh và nước tại The Coffee House,<br> bạn sẽ được tích lũy một số điểm tương ứng trên ứng dụng The Coffee House.<br> Điểm số này dùng để đổi quà và nhận những ưu đãi hấp dẫn khác.
+
+                </div>
+            </div>
+            <div class="quyenloithanhvien">
+                <h2><b>QUYỀN LỢI THÀNH VIÊN</b></h2>
+                <br> Với mỗi <b class="cam">10,000 Đ</b> trên hoá đơn, hệ thống sẽ tự động tích luỹ <b class="cam">1☆</b> vào số điểm của bạn. Số điểm càng cao, quyền lợi thành viên của bạn càng nhiều. Cùng khám phá các hạng mức thành viên tại <b class="cam">The Coffee House</b>                nhé!
+                <br>
+                <br>
+                <br>
+                <h3><b> Thành viên Vàng  <b class="cam">100 ☆</b></b>
+                </h3>
+                <div class="div-quyenloithanhvien">
+                    <div class="quyenloithanhvien-hang">
+                        <div class="quyenloithanhvien-icon">
+                            <div class="quyenloithanhvien-icon1">
+                                <img src="./img/welcomedrink1.png">
+                            </div>
+                            <br>
+                            <div class="quyenloithanhvien-icon-text">
+                                <b>Welcome drink</b><br><br> <b class="cam">01</b> Phần nước tự chọn Miễn phí<br> khi thăng hạng thành công
+                            </div>
+
+                        </div>
+                        <div class="quyenloithanhvien-icon">
+                            <div class="quyenloithanhvien-icon1">
+                                <img src="./img/welcomedrink2.png">
+                            </div>
+                            <br>
+                            <div class="quyenloithanhvien-icon-text">
+                                <b>Happy birthday Cake</b><br><br> Miễn phí <b class="cam">01</b> Phần bánh ngọt bất kì tại The Coffee House trong tháng sinh nhật
+                            </div>
+                        </div>
+                        <div class="quyenloithanhvien-icon">
+                            <div class="quyenloithanhvien-icon1">
+                                <img src="./img/welcomedrink3.png">
+                            </div>
+                            <br>
+                            <div class="quyenloithanhvien-icon-text">
+                                <b>Free drink</b><br><br> Mỗi <b class="cam">50☆</b> bạn sẽ đổi được 01 Phần nước<br> tự chọn Miễn phí
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <h3><b> Thành viên Vàng <b class="cam"> 500 ☆</b></b>
+                </h3>
+                <div class="div-quyenloithanhvien">
+                    <div class="quyenloithanhvien-hang">
+                        <div class="quyenloithanhvien-icon">
+                            <div class="quyenloithanhvien-icon1">
+                                <img src="./img/welcomedrink4.png">
+                            </div>
+                            <br>
+                            <div class="quyenloithanhvien-icon-text">
+                                <b>Free drink</b><br><br> <b class="cam">01</b> Phần nước tự chọn Miễn phí<br> khi thăng hạng thành công
+                            </div>
+
+                        </div>
+                        <div class="quyenloithanhvien-icon">
+                            <div class="quyenloithanhvien-icon1">
+                                <img src="./img/welcomedrink5.png">
+                            </div>
+                            <br>
+                            <div class="quyenloithanhvien-icon-text">
+                                <b>Thẻ Kim Cương</b><br><br>Sở hữu Thẻ Thành viên<br> Kim cương khắc tên của bạn
+                            </div>
+                        </div>
+                        <div class="quyenloithanhvien-icon">
+                            <div class="quyenloithanhvien-icon1">
+                                <img src="./img/welcomedrink6.png">
+                            </div>
+                            <br>
+                            <div class="quyenloithanhvien-icon-text">
+                                <b>Free Cake</b><br><br> Mỗi <b class="cam">100☆</b> bạn sẽ đổi được 01<br> Phần bánh tự chọn Miễn phí
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="trothannhthanhvien">
+                    <h3><b>  Hướng dẫn trở thành thành viên của<br> THE COFFE HOUSE</b></h3>
+                    <img src="./img/trothanhthanhvien.png" width="300px" height="500px">
+                    <div class="huongdan-trothanhthanhvien">
+                        <b class="cam">BƯỚC 1: TẢI ỨNG DỤNG THE COFFEE HOUSE</b><br> Tải ứng dụng <b>The Coffee House</b> trên <b>Appstore</b> hoặc <b>CH Play.</b><br> Nếu bạn đang sử dụng phiên bản cũ hơn của ứng dụng <b>The Coffee House</b>, vui lòng
+                        cập nhật phiên bản mới nhất.<br>
+                        <br>
+                        <b class="cam">BƯỚC 2: KHÁM PHÁ ỨNG DỤNG</b><br> Chọn mục Tài khoản ở góc phải của màn hình.<br> Sau đó, chọn <b>The Coffee House Rewards.</b><br>
+                        <br>
+                        <b class="cam">BƯỚC 3: TÍCH ĐIỂM VÀ NHẬN ƯU ĐÃI</b><br> Thoải mái khám phá chi tiết các <b>chương trình ưu đãi</b> dành riêng cho thành viên <b>The Coffee House,</B> số <b class="cam">☆</b> đã tích lũy và những điều thú vị khác.<br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <footer>
+        <div class="container padding">
+            <div class="row text-left" style="padding-top: 40px">
+                <div class="col-md-3">
+                    <img src="img/Capturea.png">
+                </div>
+                <br>
+                <div class="col-md-3">
+                    <h6 style="font-size: 23px">ABOUT</h6>
+                    <p style="color: #d5d5d5"> Về Chúng Tôi <br> Hạt Cà Phê The Coffee House <br> Blog <br> Cơ Hội Nghề Nghiệp <br> Cửa Hàng
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h6 style="font-size: 23px">ALWAYS-ON SUPPORT</h6>
+                    <p style="color: #d5d5d5"> Delivery 1800 6936 (07:00-21:00) <br> Support 02871 087 088 (07:00-21:00)
+                    </p>
+                    <h6 style="font-size: 23px">ADDRESS</h6>
+                    <p style="color: #d5d5d5"> 62 Tran Quang Khai, Tan Dinh, Quan 1 Ho Chi Minh, Viet Nam <br> 02871 087 088 <br> hi@thecoffeehouse.com
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h6 style="font-size: 23px">DELIVERY</h6>
+                    <p style="color: #d5d5d5"> Shipping methods <br> Payment <br> Cash voucher <br> Return <br> Exchange
+                    </p>
+                </div>
+                <hr class="light-100">
+                <div class="col-md-6" style="padding-top: 5px">
+                    Copyright © 2018 The Coffee House. All rights reserved.
+                </div>
+                <div class="col-md-6 social" style="padding-bottom: 20px">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
