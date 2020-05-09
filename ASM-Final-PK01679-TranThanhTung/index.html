@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="js/load.js"></script>
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<link rel="shortcut icon" href="images/logo.jpg" />
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/login_ registration.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.min.css">
+	<!-- liên kết thư viện jequery.min-->
+	<script src="js/jquery.min.js"></script>
+	<!-- liên kết thư viện jequery.min.js-->
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.slider').bxSlider({
+				mode: 'horizontal',
+				speed: 700,
+				auto: true,
+				pause: 2000,
+				autoHover: true,
+
+			});
+		});
+
+	</script>
+	<title></title>
+</head>
+
+<body onload="autoloadimg()">
+	<header id="header">
+		<div class="container">
+			<div id="header-wrap">
+
+				<div id="logo">
+					<a href="#">
+						<img src="images/logo.jpg" alt=""></a>
+				</div>
+				<div class="menu">
+					<ul class="sub-menu">
+
+						<li>
+							<a href="#">CHUYỆN CÀ PHÊ</a>
+							<ul class="menucon">
+								<li><a href="#">HÀNH TRÌNH TỪ NÔNG TRẠI ĐẾN LY CÀ PHÊ</a></li>
+								<li><a href="#">HẠT CÀ PHÊ THE COFFEE HOUSE</a></li>
+								<li><a href="#">NGHỆ THUẬT PHA CHẾ</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">MENU</a>
+						</li>
+
+						<li>
+							<a href="#">TIN TỨC</a>
+							<ul class="menucon">
+								<li><a href="#">BLOG</a></li>
+								<li><a href="#">FOLLOW US ON INSTAGRAM</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">CỦA HÀNG</a>
+						</li>
+
+					</ul>
+
+				</div>
+				<div class="btn-user">
+
+					<div class="btn-cart1" onclick="show()">
+						<img id="icons-cart" src="images/icons/cart.png" alt="">
+
+					</div>
+					<i class="fa fa-user" id="icon_user"></i>
+					<div id="user" class="">
+						<a href="#" id="btn-dangkymoi">Đăng ký</a>
+						<a href="#" onclick="login();">Đăng nhập</a>
+					</div>
+				</div>
+
+				<div class="column-cart" id="displayBlock">
+
+					<div class="cart-total">
+						<strong class="cart-total-title">Tổng Tiền: </strong>
+						<span class="cart-total-price">0đ</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="khung-slider">
+			<div class="slider">
+				<img src="images/123.jpg">
+				<img src="images/456.jpg">
+				<img src="images/789.jpg">
+				<img src="images/1234.jpg">
+			</div>
+		</div>
+	</header>
+	<div class="clear"></div>
+	<div class="phan2" id="phan-menu">
+
+		<div class="bao-bang">
+			<div class="bang-n">
+
+				<div class="ten-bang">
+					<h1 style="border-bottom: 5px rgb(142, 189, 189) solid;">Sản phẩm nổi bật</h1>
+
+				</div>
+				<div class="san-pham">
+
+					<div class="column">
+						<div class="item-column">
+							<img class="image" src="https://product.hstatic.net/1000075078/product/tra_dao_cam_sa_on_bg_large.jpg" />
+							<div class="ten-item-column">
+								<a href="#"> TRÀ ĐÀO CAM SẢ</a>
+							</div>
+							<p>
+								TRAINING TRAINING</p>
+							<p class="gia">45.000 đ</p>
+							<button class="btn btn-default add-to-cart" id="btn-cart">Đặt
+								hàng</button>
+						</div>
+					</div>
+					<div class="column">
+						<div class="item-column">
+							<img class="image" src="https://product.hstatic.net/1000075078/product/cherry_mac_6a3403fdb832464da88de8c6e6ddf662_large.jpg" />
+							<div class="ten-item-column">
+								<a href="#">TRÀ CHERRY MACCHIATO</a>
+							</div>
+
+							<p>
+								CHERRY MACCHIATO TEA</p>
+							<p class="gia">55.000 đ</p>
+							<button class="btn btn-default add-to-cart" id="btn-cart">Đặt hàng</button>
+
+						</div>
+					</div>
+					<div class="column">
+						<div class="item-column">
+							<img class="image" src="https://product.hstatic.net/1000075078/product/blacktea_macchiat_large.jpg" />
+							<div class="ten-item-column">
+								<a href="#">TRÀ ĐEN MACCHIATO
+								</a>
+							</div>
+							<p>
+								BLACK TEA MACCHIATO</p>
+							<p class="gia">45.000 đ</p>
+							<button class="btn btn-default add-to-cart">Đặt hàng</button>
+
+						</div>
+					</div>
+					<div class="column">
+						<div class="item-column">
+							<img class="image" src="https://product.hstatic.net/1000075078/product/matcha_latte_large.jpg" />
+							<div class="ten-item-column">
+								<a href="#">TRÀ MATCHA LATTE
+								</a>
+							</div>
+							<p>MATCHA LATTE TEA
+							</p>
+							<p class="gia">55.000 đ</p>
+							<button class="btn btn-default add-to-cart">Đặt hàng</button>
+
+						</div>
+					</div>
+				</div>
+				<div class="san-pham">
+
+					<div class="column">
+						<div class="item-column">
+							<img class="image" src="https://product.hstatic.net/1000075078/product/trasen_29e9b22739f941ff84671361ae53f3dd_large.jpg" />
+							<div class="ten-item-column">
+								<a href="#">TRÀ OOLONG SEN AN NHIÊN</a></div>
+							<p>
+								Oolong tea
+							</p>
+							<p class="gia">49.000 đ</p>
+							<button class="btn btn-default add-to-cart">Đặt hàng</button>
+						</div>
+					</div>
+					<div class="column">
+						<div class="item-column">
+							<img class="image" src="https://product.hstatic.net/1000075078/product/matcha_macchiato_large.jpg" />
+							<div class="ten-item-column">
+								<a href="#">TRÀ MATCHA MACCHIATO</a>
+							</div>
+							<p>MATCHA TEA MACCHIATO</p>
+							<p class="gia">45.000 đ</p>
+							<button class="btn btn-default add-to-cart">Đặt hàng</button>
+
+						</div>
+					</div>
+					<div class="column">
+						<div class="item-column">
+							<img class="image" src="https://product.hstatic.net/1000075078/product/tea_raspberry_fda1ba90f506483eb6568f433690173a_large.png" />
+							<div class="ten-item-column">
+								<a href="#">TRÀ PHÚC BỒN TỬ
+								</a>
+							</div>
+							<p>
+								PRINCIPAL TEA</p>
+							<p class="gia">45.000 đ</p>
+							<button class="btn btn-default add-to-cart">Đặt hàng</button>
+
+						</div>
+					</div>
+					<div class="column">
+						<div class="item-column">
+							<img class="image" src="https://product.hstatic.net/1000075078/product/xoai_mac_c4534cc7607f4d58addf470a162e8359_large.jpg" />
+							<div class="ten-item-column">
+								<a href="#">TRÀ XOÀI MACCHIATO
+								</a>
+							</div>
+							<p>
+								MACCHIATO MANGO TEA</p>
+							<p class="gia">55.000 đ</p>
+							<button class="btn btn-default add-to-cart">Đặt hàng</button>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="clear"></div>
+			<div class="ten-bang">
+				<h1 style="border-bottom: 5px rgb(212, 109, 12) solid;">COFFEE</h1>
+
+			</div>
+			<div class="san-pham">
+
+				<div class="column">
+					<div class="item-column">
+						<img class="image" src="https://product.hstatic.net/1000075078/product/cfs_large.jpg" />
+						<div class="ten-item-column">
+							<a href="#">CÀ PHÊ SỮA</a></div>
+						<p>
+							MILK COFFEE</p>
+						<p class="gia">25.000 đ</p>
+						<button class="btn btn-default add-to-cart" id="btn-cart">Đặt
+							hàng</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="item-column">
+						<img class="image" src="https://product.hstatic.net/1000075078/product/cappuccino_large.jpg" />
+						<div class="ten-item-column">
+							<a href="#">CAPPUCINNO</a></div>
+						<p>CAPPUCINNO</p>
+						<p class="gia">45.000 đ</p>
+						<button class="btn btn-default add-to-cart" id="btn-cart">Đặt
+							hàng</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="item-column">
+						<img class="image" src="https://product.hstatic.net/1000075078/product/coldbrewmilk_09db086189ce43d5bb78172613af57dc_large.jpg" />
+						<div class="ten-item-column">
+							<a href="#">COLD BREW SỮA TƯƠI</a></div>
+						<p>
+							FRESH MILK COLD</p>
+						<p class="gia">50.000 đ</p>
+						<button class="btn btn-default add-to-cart" id="btn-cart">Đặt
+							hàng</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="item-column">
+						<img class="image" src="https://product.hstatic.net/1000075078/product/vnese_coffee_large.jpg" />
+						<div class="ten-item-column">
+							<a href="#">CÀ PHÊ ĐEN</a></div>
+						<p>BLACK COFFEE</p>
+						<p class="gia">20.000 đ</p>
+						<button class="btn btn-default add-to-cart" id="btn-cart">Đặt
+							hàng</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="item-column">
+						<img class="image" src="https://product.hstatic.net/1000075078/product/espresso_large.jpg" />
+						<div class="ten-item-column">
+							<a href="#">ESPRESSO</a></div>
+						<p>ESPRESSO</p>
+						<p class="gia">45.000 đ</p>
+						<button class="btn btn-default add-to-cart" id="btn-cart">Đặt
+							hàng</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="item-column">
+						<img class="image" src="https://product.hstatic.net/1000075078/product/mango_smoothie_large.jpg" />
+						<div class="ten-item-column">
+							<a href="#">SINH TỐ CAM XOÀI</a></div>
+						<p>
+							ORGANIC BLENDING MANGO</p>
+						<p class="gia">60.000 đ</p>
+						<button class="btn btn-default add-to-cart" id="btn-cart">Đặt
+							hàng</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="item-column">
+						<img class="image" src="https://product.hstatic.net/1000075078/product/blueberry_smoothie_large.jpg" />
+						<div class="ten-item-column">
+							<a href="#">SINH TỐ VIỆT QUẤT</a></div>
+						<p>
+							BLUEBERRY SMOOTHIE</p>
+						<p class="gia">60.000 đ</p>
+						<button class="btn btn-default add-to-cart" id="btn-cart">Đặt
+							hàng</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="item-column">
+						<img class="image" src="https://product.hstatic.net/1000075078/product/cam_vang_da_xay_876a6af23e2b40599295046b03a2c66f_large.jpg" />
+						<div class="ten-item-column">
+							<a href="#">CAM VÀNG CHANH ĐÁ XAY</a></div>
+						<p>
+							GOLD ORANGE LEMON</p>
+						<p class="gia">65.000 đ</p>
+						<button class="btn btn-default add-to-cart" id="btn-cart">Đặt
+							hàng</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<!-- tin tức - khuyến mãi -->
+	<div class="clear"></div>
+	<div class="ten-bang" id="km">
+		<h1 style="border-bottom: 5px rgb(212, 109, 12) solid;">TIN TỨC</h1>
+	</div>
+	<div class="tin-tuc">
+		<div class="column-tintuc">
+			<div class="item-column-tintuc">
+				<img class="image" src="images/tintuc-km/1.jpg" style="width: 300px; height: 300px;" />
+				<div class="ten-item-column">
+					<a href="#">Ở NHÀ ĐỔI VỊ CÙNG TRÀ SỮA MẮC CA TRÂN CHÂU TRẮNG</div></a>
+				<p>Một "làn gió mới" mà The Coffee House mang đến cho bạn trong tháng 4 - TRÀ SỮA MẮC CA TRÂN CHÂU TRẮNG
+					sẽ chính thức lên kệ từ ngày 15/04, hương vị mới, trải nghiệm mới cho để bạn Ở NHÀ ĐỔI VỊ tươi mới
+					hơn và thú vị hơn. </p>
+			</div>
+		</div>
+		<div class="column-tintuc">
+			<div class="item-column-tintuc">
+				<img class="image" src="images/tintuc-km/2.jpg" style="width: 300px; height: 300px;" />
+				<div class="ten-item-column">
+					<a href="#">THE COFFEE HOUSE ĐÃ TRỞ LẠI - MÌNH CÀ PHÊ NHÉ!</div></a>
+				<p>The Coffee House xin thông báo lịch hoạt động của 154 cửa hàng trên toàn quốc từ ngày 25/04/2020.
+					Barista Nhà đã chuẩn bị món bạn yêu thích, những góc bàn quen đã sẵn sàng đón bạn sau những ngày xa
+					nhau, hôm nay mình cà phê nhé!
+				</p>
+			</div>
+		</div>
+		<div class="column-tintuc">
+			<div class="item-column-tintuc">
+				<img class="image"
+					src="https://file.hstatic.net/1000075078/file/banner_mobile_app_benefit_b3f3bb4a418647e5ad4e57da0db8cf0f_master.jpg"
+					style="width: 300px; height: 300px;" />
+				<div class="ten-item-column">
+					<a href="#">GÓI TIẾT KIỆM DÀNH CHO NGƯỜI YÊU CÀ PHÊ - TIẾT KIỆM ĐẾN 140K</div></a>
+				<p>Nhà hiểu rằng, với những ai trót yêu cà phê thì mọi việc sẽ bớt quan trọng khi chưa có ly cà phê quen
+					thuộc đầu ngày.
+					Vì vậy, Coffee Lovers phục vụ cho nhu cầu thưởng thức cà phê mỗi ngày, với mức giá tiết kiệm đến
+					140,000đ. </p>
+			</div>
+		</div>
+		<div class="column-tintuc">
+			<div class="item-column-tintuc">
+				<img class="image"
+					src="https://file.hstatic.net/1000075078/file/post1_df0b749ed49f4488b3d4a187e1a51e4d_grande.jpg"
+					style="width: 300px; height: 300px;" />
+				<div class="ten-item-column">
+					<a href="#">KHÉP LẠI HÀNH TRÌNH "TỪ HÀNH ĐỘNG NHỎ - TIẾP SỨC CHO ĐIỀU LỚN LAO"</div></a>
+				<p>mỗi ngày Việt Nam lại đón thêm những diễn biến tích cực trong cuộc chiến này, đó là kết quả của những
+					nỗ lực
+					lớn lao không mệt mỏi của những người hùng thầm lặng, của sự đồng lòng tiếp sức về vật chất lẫn tinh
+					thần của cả Việt Nam.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- form đăng nhập -->
+	<div id="wap_login">
+		<div id="login">
+
+			<h2>Đăng nhập</h2>
+
+			<form name="fLogin" action="" method="post">
+
+
+				<span class="close_login">&times;</span>
+
+				<div class="login">
+					<label for="">Tài khoản: </label>
+					<input type="text" placeholder="Nhập tài khoản" name="uname">
+					<span>*</span>
+
+					<br>
+					<div id="check"></div>
+				</div>
+
+
+				<div class="login">
+					<label for="">Mật khẩu: </label>
+					<input type="password" placeholder="Nhập mật khẩu" name="psw">
+					<span>*</span>
+					<br>
+					<div id="check1"></div>
+				</div>
+				<input type="button" value="Đăng nhập" id="btn-login" onclick="check_login();">
+				<input type="button" value="Hủy" id="btn-huy_dn"><br>
+
+				<input type="button" value="Đăng ký tài khoản mới" id="btn-dangkymoi1">
+
+			</form>
+
+		</div>
+	</div>
+	<!-- form đăng ký -->
+	<div id="wap_registration">
+		<div id="registration">
+
+			<h2>Đăng ký mới</h2>
+
+			<form name="fRegistration" action="" method="post">
+
+
+				<span class="close_registration">&times;</span>
+				<div class="login">
+					<label for="">Tài khoản: </label>
+					<input type="text" placeholder="Nhập tài khoản" name="uname_new"><span>*</span>
+					<br>
+					<div id="check2"></div>
+				</div>
+				<div class="login">
+					<label for="">Mật khẩu: </label>
+					<input type="password" placeholder="Nhập mật khẩu" name="pws_new"><span>*</span>
+					<br>
+					<div id="check3"></div>
+				</div>
+				<div class="login">
+					<label for="">Họ và Tên: </label>
+					<input type="text" placeholder="Nhập Họ và Tên" name="fullname"><span>*</span>
+					<br>
+					<div id="check4"></div>
+				</div>
+				<div class="login">
+					<label for="">Số điện thoại: </label>
+					<input type="text" placeholder="VD: 0392350814" name="sdt"><span>*</span>
+					<br>
+					<div id="check5"></div>
+				</div>
+				<div class="login">
+					<label for="">Email: </label>
+					<input type="text" placeholder="VD: abc@gmail.com" name="email"><span>*</span>
+					<br>
+					<div id="check6"></div>
+				</div>
+				<div class="login">
+					<select name="sex">
+						<option value="0">Chọn giới tính</option>
+						<option value="1">Nam</option>
+						<option value="2">Nữ</option>
+						<option value="3">Khác</option>
+					</select><span>*</span><br>
+					<div id="check7"></div>
+				</div>
+				<input type="button" value="Đăng ký" id="btn-registration" onclick="check_regstration();">
+				<input type="button" value="Hủy" id="btn-huy_dk"><br>
+
+				<input type="button" value="Đăng nhập" id="btn-dangnhaplai">
+
+			</form>
+
+		</div>
+	</div>
+	<!-- liên hệ -->
+	<div id="wap_lienhe">
+		<div id="lienhe">
+
+			<h3>Liên hệ</h3>
+
+			<form name="flienhe" action="" method="post" id="flienhe">
+				<span class="close_lh">&times;</span>
+				<div class="inputlh">
+					<label for="">Nhập Email</label>
+					<input type="text" placeholder="VD: abc@gmail.com" name="email_lienhe">
+
+					<br>
+					<div id="check_email_lh"></div>
+
+				</div>
+
+				<div class="inputlh">
+					<label for="">Nhập Tên</label>
+					<input type="text" placeholder="Tên của bạn?" name="ten_lienhe">
+
+					<br>
+					<div id="check_ten_lh"></div>
+				</div>
+				<div class="inputlh">
+					<label for="">Nội dung</label>
+					<textarea name="noidung_lh" placeholder="Nhập nội dung" cols="30" rows="10"></textarea>
+
+					<br>
+					<div id="check_noidung_lh"></div>
+				</div>
+				<div class="inputlh">
+					<input type="button" value="Gửi" id="btn-lienhe" onclick="check_lienhe(); ">
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<div class="clear"></div>
+	<footer>
+		<div class="footer" id="footer">
+			<div class="footer_wap">
+				<div class="box_footer phan1">
+					<h3>THE COFFEE HOUSE SIGNATURE</h3>
+					<p class="p_footer">
+						Với những nghệ nhân rang tâm huyết và đội ngũ Barista tài năng cùng những câu chuyện cà phê đầy
+						cảm hứng,
+						ngôi nhà Signature 19B Phạm Ngọc Thạch, Q.3, TP.HCM là không gian dành riêng cho những ai trót
+						yêu say đắm
+						hương vị của những hạt cà phê tuyệt hảo.
+					</p>
+				</div>
+				<div class="box_footer phan2">
+					<h3>AlWAYS-ON SUPPORT</h3>
+					<p class="p_footer"> Delivery 1800 6936 (07:00-21:00)
+						Support 02871 087 088 (07:00-21:00) <br>
+				</div>
+				<div class="box_footer phan3">
+					<h3>ADDRESS</h3>
+					<p class="p_footer">Hotline: 02871 087 088 <br>
+						Website: http://hi@thecoffeehouse.vn<br>
+						62 Tran Quang Khai, Tan Dinh, Quan 1 Ho Chi Minh, Vietnam</p><br>
+					<input type="button" id="btn-lienhengay" onclick="lienhe();" value="Liên hệ ngay!">
+				</div>
+
+			</div>
+			<div class="clear"></div>
+			<hr>
+			<div class="Copyright">
+				<p>Copyright © 2018 The Coffee House. All rights reserved.- Create by Thanh Tùng</p>
+			</div>
+
+		</div>
+	</footer>
+</body>
+
+<script src="js/giohang-sanpham.js" async></script>
+<script src="js/load.js"></script>
+<script src="js/login_registration.js"></script>
+
+</html>
